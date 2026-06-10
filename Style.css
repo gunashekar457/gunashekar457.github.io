@@ -1,0 +1,115 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d1117;
+    color: white;
+    font-family: Segoe UI,sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #161b22;
+}
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero h2 {
+        color: #58a6ff;
+        margin: 20px 0;
+    }
+
+section {
+    padding: 80px 10%;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #161b22;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.project {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 80px;
+    align-items: center;
+}
+
+    .project img {
+        width: 450px;
+        border-radius: 15px;
+    }
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #58a6ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #58a6ff;
+}
+
+.socials {
+    display: flex;
+    gap: 25px;
+}
+
+    .socials a {
+        color: #58a6ff;
+        text-decoration: none;
+    }
+
+@media(max-width:900px) {
+
+    .project {
+        flex-direction: column;
+    }
+
+        .project img {
+            width: 100%;
+        }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
