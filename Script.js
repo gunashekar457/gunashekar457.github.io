@@ -1,23 +1,53 @@
-const text = [
+const words = [
     "Gameplay Programmer",
     "Unity Developer",
     "Unreal Engine Developer",
     "C# & C++ Programmer"
 ];
 
-let i = 0;
+let wordIndex = 0;
+let charIndex = 0;
 
-function rotateText()
+const typingElement =
+document.getElementById("typing");
+
+function type()
 {
-    document.getElementById("typing").textContent =
-        text[i];
+    if(charIndex < words[wordIndex].length)
+    {
+        typingElement.textContent +=
+            words[wordIndex].charAt(charIndex);
 
-    i++;
+        charIndex++;
 
-    if(i >= text.length)
-        i = 0;
+        setTimeout(type,80);
+    }
+    else
+    {
+        setTimeout(erase,1500);
+    }
 }
 
-rotateText();
+function erase()
+{
+    if(charIndex > 0)
+    {
+        typingElement.textContent =
+        words[wordIndex].substring(0,charIndex-1);
 
-setInterval(rotateText, 2000);
+        charIndex--;
+
+        setTimeout(erase,40);
+    }
+    else
+    {
+        wordIndex++;
+
+        if(wordIndex >= words.length)
+            wordIndex = 0;
+
+        setTimeout(type,300);
+    }
+}
+
+type();
