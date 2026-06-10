@@ -16,7 +16,7 @@ function type()
     if(charIndex < words[wordIndex].length)
     {
         typingElement.textContent +=
-            words[wordIndex].charAt(charIndex);
+        words[wordIndex].charAt(charIndex);
 
         charIndex++;
 
@@ -33,7 +33,10 @@ function erase()
     if(charIndex > 0)
     {
         typingElement.textContent =
-        words[wordIndex].substring(0,charIndex-1);
+        words[wordIndex].substring(
+            0,
+            charIndex - 1
+        );
 
         charIndex--;
 
@@ -44,7 +47,9 @@ function erase()
         wordIndex++;
 
         if(wordIndex >= words.length)
+        {
             wordIndex = 0;
+        }
 
         setTimeout(type,300);
     }
