@@ -1,62 +1,70 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guna Sekhar Reddy | Gameplay Programmer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guna Sekhar Reddy | Gameplay Programmer</title>
+<meta name="description" content="Guna Sekhar Reddy Bakka — Gameplay Programmer specializing in Unity, Unreal Engine, C# and C++.">
 
-    <link rel="stylesheet" href="Style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Guna.dev</div>
+<div class="scanlines" aria-hidden="true"></div>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="logo">GUNA<span>.dev</span></div>
 
-<header class="hero">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <ul id="navList">
+        <li><a href="#about" data-nav>01 <em>About</em></a></li>
+        <li><a href="#skills" data-nav>02 <em>Skills</em></a></li>
+        <li><a href="#projects" data-nav>03 <em>Projects</em></a></li>
+        <li><a href="#contact" data-nav>04 <em>Contact</em></a></li>
+    </ul>
+</nav>
+
+<header class="hero" id="top">
 
     <div class="hero-content">
 
         <div class="hero-profile">
 
-            <div class="profile-container">
+            <div class="profile-container hud-frame">
                 <img
                     src="assests/guna-profile.png"
-                    alt="Guna Sekhar Reddy"
+                    alt="Portrait of Guna Sekhar Reddy Bakka"
                     class="profile-image"
                 >
+                <div class="status-chip">
+                    <span class="dot"></span> AVAILABLE FOR HIRE
+                </div>
             </div>
 
             <div class="hero-text">
 
+                <p class="eyebrow">// gameplay_programmer.exe</p>
+
                 <h1>Guna Sekhar Reddy Bakka</h1>
 
-                <h2 id="typing"></h2>
+                <h2><span id="typing"></span><span class="cursor" aria-hidden="true"></span></h2>
 
-                <p>
+                <p class="hero-desc">
                     Gameplay Programmer specializing in
-                    Unity, Unreal Engine, C#, and C++.
+                    Unity, Unreal Engine, C#, and C++ —
+                    building systems that make games feel good to play.
                 </p>
 
                 <div class="buttons">
-
-                    <a href="#projects" class="btn">
-                        View Projects
-                    </a>
-
-                    <a href="assests/resume.pdf"
-                       target="_blank"
-                       class="btn btn-outline">
-                        Resume
-                    </a>
-
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="assests/resume.pdf" target="_blank" class="btn btn-outline">Resume</a>
                 </div>
 
             </div>
@@ -65,51 +73,57 @@
 
     </div>
 
+    <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+    </a>
+
 </header>
+
     <section id="about">
 
-        <h2>About Me</h2>
+        <h2 class="section-title"><span class="tag">01</span> About Me</h2>
 
-        <p>
-            I am a Gameplay Programmer currently studying
-            Game Programming at FutureGames, Warsaw.
+        <p class="reveal">
+            I am a Gameplay Programmer currently studying Game Programming
+            at FutureGames, Warsaw. I enjoy creating gameplay systems, AI
+            behaviours, combat mechanics, progression systems and scalable
+            game architectures.
+        </p>
 
-            I enjoy creating gameplay systems, AI behaviours,
-            combat mechanics, progression systems and
-            scalable game architectures.
-
-            My goal is to build memorable player experiences
-            through clean and maintainable code.
+        <p class="reveal">
+            My goal is to build memorable player experiences through clean
+            and maintainable code.
         </p>
 
     </section>
 
     <section id="skills">
 
-        <h2>Technical Skills</h2>
+        <h2 class="section-title"><span class="tag">02</span> Technical Skills</h2>
 
         <div class="skill-grid">
 
-            <div class="card">
+            <div class="card hud-frame reveal">
                 <h3>Languages</h3>
                 <p>C#</p>
                 <p>C++</p>
             </div>
 
-            <div class="card">
+            <div class="card hud-frame reveal">
                 <h3>Engines</h3>
                 <p>Unity</p>
                 <p>Unreal Engine 5</p>
             </div>
 
-            <div class="card">
+            <div class="card hud-frame reveal">
                 <h3>Tools</h3>
                 <p>Git</p>
                 <p>Perforce</p>
                 <p>Jira</p>
             </div>
 
-            <div class="card">
+            <div class="card hud-frame reveal">
                 <h3>Focus Areas</h3>
                 <p>Gameplay Programming</p>
                 <p>AI Systems</p>
@@ -123,55 +137,65 @@
 
     <section id="projects">
 
-        <h2>Featured Projects</h2>
+        <h2 class="section-title"><span class="tag">03</span> Featured Projects</h2>
 
-        <div class="project">
+        <div class="project hud-frame reveal">
 
-            <img src="assests/greg-the-frog.png">
+            <img src="assests/greg-the-frog.png" alt="Greg The Frog gameplay screenshot">
 
             <div class="project-info">
 
+                <span class="project-tag">Unity • Gameplay Programming</span>
+		<span class="project-tag-group">Academic • Group Project</span>
+
                 <h3>Greg The Frog</h3>
+		<p>
+		   Greg the Frog: Burning Escape is a fast and momentum-driven platformer where split-second choices matter just as much as quick reflexes. 
+		</p>
 
                 <p>
-                    Gameplay systems focused on frog rescue,
-                    follower mechanics, checkpoints,
-                    progression tracking and audio management.
+                    As a Gameplay Programmer, I was responsible for implementing
                 </p>
 
                 <ul>
                     <li>Follower System</li>
                     <li>Checkpoint System</li>
-                    <li>Lives & Respawn</li>
+                    <li>Lives &amp; Respawn</li>
                     <li>Audio Manager</li>
+		    <li>Feedback System</li>
                 </ul>
 
-                <a href="https://futuregames.itch.io/greg-the-frog" target="_blank" class="btn">
-                    Play Game
-                </a>
+		 <p class="team-info">
+                    Developed as part of a 15-person multidisciplinary team, collaborating closely with designers and other disciplines to prototype, iterate, and polish gameplay systems.
+                </p>
 
-                <a href="https://www.youtube.com/watch?v=Oufd0Ngkfu0" target="_blank" class="btn btn-outline">
-                    Gameplay Video
-                </a>
+                <div class="project-buttons">
+                    <a href="https://futuregames.itch.io/greg-the-frog" target="_blank" class="btn">Play Game</a>
+                    <a href="https://www.youtube.com/watch?v=Oufd0Ngkfu0" target="_blank" class="btn btn-outline">Gameplay Video</a>
+                </div>
 
             </div>
 
         </div>
 
-        <div class="project">
+        <div class="project hud-frame reveal">
 
-            <img src="assests/shaperfolk.png">
+            <img src="assests/shaperfolk.png" alt="Shaperfolk gameplay screenshot">
 
             <div class="project-info">
+
+                <span class="project-tag">Unity • Tower Defense</span>
+		<span class="project-tag-group">Academic • Group Project 2</span>
 
                 <h3>Shaperfolk</h3>
 
                 <p>
-                    Modular tower defense architecture
-                    featuring configurable towers,
-                    fusion systems and combat mechanics.
+                    Shaperfolk is a tower defense game set in the Amazon Rainforest, where the great Ceiba tree Poe connects the flora and fauna of the forest.
+		     When the Lumberfolk invade the rainforest seeking magical powers from Poe's
+ 		    bark, players must defend the forest using a variety of towers and strategic combinations.
                 </p>
-
+		<p>
+		   As a Gameplay Programmer, I worked on the </p>
                 <ul>
                     <li>Tower Framework</li>
                     <li>Fusion System</li>
@@ -179,102 +203,89 @@
                     <li>Projectile Combat</li>
                 </ul>
 
-                <a href="https://futuregames.itch.io/shaperfolk" target="_blank" class="btn">
-                    Play Game
-                </a>
+		<p class="team-info">
+                   	Developed as part of an 18-person multidisciplinary team, 
+			working closely with designers and other disciplines to iterate and polish the gameplay experience.
+                </p>
 
-                <a href="https://www.youtube.com/watch?v=2InpBySqrmQ" target="_blank" class="btn btn-outline">
-                    Gameplay Video
-                </a>
+
+                <div class="project-buttons">
+                    <a href="https://futuregames.itch.io/shaperfolk" target="_blank" class="btn">Play Game</a>
+                    <a href="https://www.youtube.com/watch?v=2InpBySqrmQ" target="_blank" class="btn btn-outline">Gameplay Video</a>
+                </div>
 
             </div>
 
         </div>
 
-<div class="project">
+        <div class="project hud-frame reveal">
 
-    <img src="assests/sheepkeeper.png"
-         alt="Sheepkeeper gameplay">
+            <img src="assests/sheepkeeper.png" alt="Sheepkeeper gameplay screenshot">
 
-    <div class="project-info">
+            <div class="project-info">
 
-        <h3>Sheepkeeper</h3>
+                <span class="project-tag">Unreal Engine 5 • Gameplay Programming</span>
+		<span class="project-tag-group">Academic • Group Project 3</span>
 
-        <span class="project-tag">
-            Unreal Engine 5 • Gameplay Programming
-        </span>
+                <h3>Sheepkeeper</h3>
 
-        <p>
-            Sheepkeeper is a cozy local co-op herding game where
-            two players work together to guide a flock of sheep
-            through levels, avoid hazards, and safely reach the barn.
-        </p>
+                <p>
+                    Sheepkeeper is a cozy local co-op herding game where
+                    two players work together to guide a flock of sheep
+                    through levels, avoid hazards, and safely reach the barn.
+                </p>
 
-        <p>
-            As a Gameplay Programmer, I worked primarily on the
-            sheep AI and flocking behaviour, including flock movement,
-            obstacle avoidance, environmental hazards and gameplay
-            interactions.
-        </p>
+                <p>
+                    As a Gameplay Programmer, I worked primarily on the
+                </p>
 
-        <ul>
-            <li>Sheep Flocking AI</li>
-            <li>Obstacle Avoidance</li>
-            <li>Environmental Hazards</li>
-            <li>Falling Platform Systems</li>
-            <li>Post-Processing Effects</li>
-            <li>Gameplay Systems</li>
-            <li>Unreal Engine 5</li>
-            <li>Team Development</li>
-        </ul>
+                <ul>
+                    <li>Sheep Behaviour System</li>
+                    <li>Sheep Flocking AI</li>
+                    <li>Leader Behaviour</li>
+		    <li>Sheep Ability System</li>
+                    <li>Obstacle Avoidance</li>
+                    <li>Environmental Hazards</li>
+                    <li>Post-Processing Effects</li>
+                </ul>
 
-        <p class="team-info">
-            Developed as part of a 12-person multidisciplinary team,
-            working closely with designers to iterate on gameplay,
-            AI behaviour and level interactions.
-        </p>
+                <p class="team-info">
+                    Developed as part of a 12-person multidisciplinary team,
+                    working closely with designers to iterate on gameplay,
+                    AI behaviour and level interactions.
+                </p>
 
-        <div class="project-buttons">
+                <div class="project-buttons">
+                    <a href="https://futuregames.itch.io/sheepkeeper" target="_blank" class="btn">Play Game</a>
+		    <a href="https://www.youtube.com/watch?v=l9Z9COZ32BE" target="_blank" class="btn btn-outline">Gameplay Video</a>
 
-            <a href="https://futuregames.itch.io/sheepkeeper"
-               target="_blank"
-               class="btn">
-                Play Game
-            </a>
+                </div>
+
+            </div>
 
         </div>
-
-    </div>
-
-</div>
 
     </section>
 
     <section id="contact">
 
-        <h2>Contact</h2>
+        <h2 class="section-title"><span class="tag">04</span> Contact</h2>
 
-        <p>
-            Looking for a Gameplay Programmer?
-        </p>
+        <p class="reveal">Looking for a Gameplay Programmer? Let's talk.</p>
 
-        <div class="socials">
+        <div class="socials reveal">
 
-            <a href="mailto:gunashekarbakka@gmail.com">
-                Email
-            </a>
-
-            <a href="https://github.com/gunashekar457" target="_blank">
-                GitHub
-            </a>
-
-            <a href="https://www.linkedin.com/in/guna-sekhar-bakka/" target="_blank">
-                LinkedIn
-            </a>
+            <a href="mailto:gunashekarbakka@gmail.com">Email</a>
+            <a href="https://github.com/gunashekar457" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/guna-sekhar-bakka/" target="_blank">LinkedIn</a>
 
         </div>
 
     </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Guna Sekhar Reddy Bakka — built with care, one commit at a time.</p>
+    </footer>
 
     <script src="Script.js"></script>
 
