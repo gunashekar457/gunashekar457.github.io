@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheepkeeper | Guna Sekhar Reddy</title>
+<meta name="description" content="Sheepkeeper — a cozy local co-op herding game. Gameplay programming breakdown by Guna Sekhar Reddy Bakka.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+
+<nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">GUNA<span>.dev</span></a></div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <ul id="navList">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<a href="index.html#projects" class="back-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    Back to Projects
+</a>
+
+<div class="detail-hero">
+
+    <div class="detail-tags">
+        <span class="project-tag">Unreal Engine 5 • Gameplay Programming</span>
+        <span class="project-tag-group">Academic • Group Project</span>
+    </div>
+
+    <h1>Sheepkeeper</h1>
+
+    <p class="lede">
+        Sheepkeeper is a cozy local co-op herding game where you take on the role of cartoon sheepdogs and guide a flock of sheep through levels.
+	Work together with another player, use barking and special abilities to control the flock, avoid environmental hazards, and bring as many 
+	sheep as possible safely to the barn. The more sheep you rescue, the more stars you earn!
+    </p>
+
+    <p class="lede">
+	Guide your flock from start to finish while keeping the sheep alive. Barking pushes the sheep away from your dog, allowing you to steer, split, gather, and redirect the flock.
+	But be careful! Sheep can easily scatter or wander into danger. Cooperation and good positioning are the key to success.
+    </p>
+
+    <img src="assests/sheepkeeper.png" alt="Sheepkeeper gameplay screenshot">
+
+    <div class="detail-buttons">
+        <a href="https://futuregames.itch.io/sheepkeeper" target="_blank" class="btn">Play Game</a>
+        <a href="https://www.youtube.com/watch?v=l9Z9COZ32BE" target="_blank" class="btn btn-outline">Gameplay Video</a>
+    </div>
+
+</div>
+
+<section class="detail-section">
+
+    <h2 class="section-title"><span class="tag">//</span> My Contributions</h2>
+
+    <ul class="contribution-list">
+        <li>Sheep Behaviour System</li>
+        <li>Sheep Flocking AI</li>
+        <li>Leader Behaviour</li>
+        <li>player Ability System</li>
+        <li>Obstacle Avoidance</li>
+        <li>Environmental Hazards</li>
+	<li>Vfx Niagara</li>
+        <li>Post-Processing Effects</li>
+    </ul>
+
+    <p class="team-info">
+        Developed as part of a 12-person multidisciplinary team, working
+        closely with designers to iterate on gameplay, AI behaviour and
+        level interactions.
+    </p>
+
+</section>
+
+<section class="detail-section">
+
+    <h2 class="section-title"><span class="tag">//</span> Development Footage</h2>
+
+    <div class="video-grid">
+
+        <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="6OFHMdDBJjc"
+                    src="https://www.youtube.com/embed/6OFHMdDBJjc?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=6OFHMdDBJjc&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="First Prototype Sheep AI"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>First Prototype — Sheep AI</h4>
+                <p>Early prototype establishing the base movement and decision loop for individual sheep.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="uPQcrsVAxI0"
+                    src="https://www.youtube.com/embed/uPQcrsVAxI0?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=uPQcrsVAxI0&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="Leader Behaviour"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>Leader Behaviour</h4>
+                <p>How a designated leader sheep influences and directs the rest of the flock.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="xQNdW9eIk_s"
+                    src="https://www.youtube.com/embed/xQNdW9eIk_s?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=xQNdW9eIk_s&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="Sheep State Machine"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>Sheep State Machine</h4>
+                <p>The underlying state transitions driving each sheep's behaviour and reactions.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="JGRGppdC0PQ"
+                    src="https://www.youtube.com/embed/JGRGppdC0PQ?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=JGRGppdC0PQ&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="Player Ability and Sheep Feedback System"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>player Ability &amp; sheep feedback System</h4>
+                <p>sheep reaction feedbacks on player abilitys</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; <span id="year"></span> Guna Sekhar Reddy Bakka — built with care, one commit at a time.</p>
+</footer>
+
+<script src="Script.js"></script>
+
+</body>
+</html>

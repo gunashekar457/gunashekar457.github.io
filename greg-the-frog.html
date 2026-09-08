@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greg The Frog | Guna Sekhar Reddy</title>
+<meta name="description" content="Greg The Frog: Burning Escape — a momentum-driven platformer. Gameplay programming breakdown by Guna Sekhar Reddy Bakka.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<div class="scanlines" aria-hidden="true"></div>
+
+<nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">GUNA<span>.dev</span></a></div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+
+    <ul id="navList">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<a href="index.html#projects" class="back-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    Back to Projects
+</a>
+
+<div class="detail-hero">
+
+    <div class="detail-tags">
+        <span class="project-tag">Unity • Gameplay Programming</span>
+        <span class="project-tag-group">Academic • Group Project</span>
+    </div>
+
+    <h1>Greg The Frog</h1>
+
+    <p class="lede">
+        Greg the Frog: Burning Escape is a fast and momentum-driven platformer where split-second choices matter just as much as quick reflexes. 
+	A peaceful rainforest becomes a blazing nightmare in an instant. Smoke fills the air, branches crash to the ground, and fire races across
+	 the forest—and Greg the Frog must leap, swing, and slide through the burning wilderness before it is too late.
+    </p>
+	<p class="lede">
+	Scattered throughout the forest are baby frogs clinging to leaves or frozen in fear. 
+	Saving them slows Greg down, but leaving them behind comes at its own cost. Will you run fast to survive, or risk everything to save the others?
+        </p>
+
+
+   
+
+    <img src="assests/greg-the-frog.png" alt="Greg The Frog gameplay screenshot">
+
+    <div class="detail-buttons">
+        <a href="https://futuregames.itch.io/greg-the-frog" target="_blank" class="btn">Play Game</a>
+        <a href="https://www.youtube.com/watch?v=Oufd0Ngkfu0" target="_blank" class="btn btn-outline">Gameplay Video</a>
+    </div>
+
+</div>
+
+<section class="detail-section">
+
+    <h2 class="section-title"><span class="tag">//</span> My Contributions</h2>
+
+    <ul class="contribution-list">
+        <li>Follower System</li>
+        <li>Checkpoint System</li>
+        <li>Lives &amp; Respawn</li>
+        <li>UI &amp; Audio Manager</li>
+        <li>Feedback System</li>
+    </ul>
+
+    <p class="team-info">
+        Developed as part of a 15-person multidisciplinary team, collaborating
+        closely with designers and other disciplines to prototype, iterate,
+        and polish gameplay systems.
+    </p>
+
+</section>
+
+<section class="detail-section">
+
+    <h2 class="section-title"><span class="tag">//</span> Development Footage</h2>
+
+    <div class="video-grid">
+
+      
+
+        <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="6fDcRu2g8iw"
+                    src="https://www.youtube.com/embed/6fDcRu2g8iw?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=6fDcRu2g8iw&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="Initial Frog Collection"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>Initial Frog Collection</h4>
+                <p>Early version of the collectible pickup and follower-join logic.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="TkrwMH0BINU"
+                    src="https://www.youtube.com/embed/TkrwMH0BINU?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=TkrwMH0BINU&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="Frog Collecting Stage 2"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>Frog Collecting — Stage 2</h4>
+                <p>Iterated follower system with refined collection and chaining behaviour.</p>
+            </div>
+        </div>
+  <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="Cgkznf5SU4Q"
+                    src="https://www.youtube.com/embed/Cgkznf5SU4Q?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=Cgkznf5SU4Q&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="Frog Tracker"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>Frog Tracker</h4>
+                <p>Tracks every frog that saves or losts.</p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrap">
+                                <iframe class="yt-player" data-video-id="LajZLiJANRw"
+                    src="https://www.youtube.com/embed/LajZLiJANRw?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=LajZLiJANRw&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
+                    title="Sound Implementation"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <button class="mute-toggle" aria-label="Unmute video">
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                </button>
+            </div>
+            <div class="video-card-caption">
+                <h4>Sound Implementation</h4>
+                <p>Smoothly blends all the sounds and traverse across the  scenes</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; <span id="year"></span> Guna Sekhar Reddy Bakka — built with care, one commit at a time.</p>
+</footer>
+
+<script src="Script.js"></script>
+
+</body>
+</html>

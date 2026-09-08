@@ -103,7 +103,7 @@ if("IntersectionObserver" in window && sections.length){
                 link.classList.add("active");
             }
         });
-    }, { threshold: 0.4 });
+    }, { threshold: 0, rootMargin: "-45% 0px -50% 0px" });
 
     sections.forEach(section => navObserver.observe(section));
 }
@@ -113,3 +113,81 @@ const yearEl = document.getElementById("year");
 if(yearEl){
     yearEl.textContent = new Date().getFullYear();
 }
+
+/* ---------- Clickable project cards ---------- */
+document.querySelectorAll(".project[data-link]").forEach(card => {
+    card.addEventListener("click", (e) => {
+        if(e.target.closest("a")) return; // let inner links/buttons behave normally
+        window.location.href = card.dataset.link;
+    });
+});
+
+/* ---------- YouTube-backed development footage players ---------- */
+/* Videos are embedded via the YouTube IFrame API instead of <video> tags.
+   They autoplay muted + loop, stay inline (no click-through to YouTube),
+   and the existing mute-toggle button controls them the same way it
+   controlled the old <video> elements. */
+
+const ytContainers = document.querySelectorAll(".yt-player");
+const ytPlayers = new Map(); // .video-wrap element -> YT.Player instance
+const ytPendingPlayers = [];
+let ytApiRequested = false;
+
+function loadYouTubeApi(){
+    if(ytApiRequested) return;
+    ytApiRequested = true;
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+}
+
+function createYtPlayer(iframeEl){
+    new YT.Player(iframeEl, {
+        events: {
+            onReady: (e) => {
+                e.target.mute();
+                e.target.playVideo();
+                const wrap = iframeEl.closest(".video-wrap");
+                if(wrap) ytPlayers.set(wrap, e.target);
+            }
+        }
+    });
+}
+
+// Called by the YouTube IFrame API script once it has loaded
+window.onYouTubeIframeAPIReady = function(){
+    ytPendingPlayers.forEach(createYtPlayer);
+    ytPendingPlayers.length = 0;
+};
+
+if(ytContainers.length){
+    loadYouTubeApi();
+    ytContainers.forEach(el => ytPendingPlayers.push(el));
+}
+
+/* ---------- Video mute/unmute toggle ---------- */
+const muteButtons = document.querySelectorAll(".mute-toggle");
+
+muteButtons.forEach(btn => {
+    const wrap = btn.closest(".video-wrap");
+    if(!wrap) return;
+
+    btn.addEventListener("click", () => {
+        const player = ytPlayers.get(wrap);
+        if(!player || typeof player.isMuted !== "function") return; // player still loading
+
+        const wasMuted = player.isMuted();
+
+        if(wasMuted){
+            // unmuting this one — mute every other player so audio doesn't overlap
+            ytPlayers.forEach((p, w) => { if(w !== wrap) p.mute(); });
+            muteButtons.forEach(b => { if(b !== btn) b.classList.remove("is-unmuted"); });
+            player.unMute();
+        } else {
+            player.mute();
+        }
+
+        btn.classList.toggle("is-unmuted", wasMuted);
+        btn.setAttribute("aria-label", wasMuted ? "Mute video" : "Unmute video");
+    });
+});
