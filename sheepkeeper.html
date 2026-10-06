@@ -8,8 +8,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 
+<meta name="theme-color" content="#310409">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🐸%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="Style.css">
 </head>
 <body>
@@ -24,7 +26,7 @@
     </button>
 
     <ul id="navList">
-        <li><a href="index.html#about">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="index.html#contact">Contact</a></li>
@@ -73,10 +75,10 @@
         <li>Sheep Behaviour System</li>
         <li>Sheep Flocking AI</li>
         <li>Leader Behaviour</li>
-        <li>player Ability System</li>
+        <li>Player Ability System</li>
         <li>Obstacle Avoidance</li>
         <li>Environmental Hazards</li>
-	<li>Vfx Niagara</li>
+	<li>Niagara VFX</li>
         <li>Post-Processing Effects</li>
     </ul>
 
@@ -85,6 +87,19 @@
         closely with designers to iterate on gameplay, AI behaviour and
         level interactions.
     </p>
+
+</section>
+
+<section class="detail-section">
+
+    <h2 class="section-title">How It Works</h2>
+
+    <ul class="tech-list">
+        <li><b>State-driven behaviour</b>Each sheep switches between states and responds to what is happening around it.</li>
+        <li><b>Flocking</b>Sheep steer with boids. Player barks and hazards apply external forces on top of the flocking.</li>
+        <li><b>Leader behaviour</b>A leader sheep influences where the rest of the flock goes, which gives the player something to herd around.</li>
+        <li><b>Feedback</b>Sheep react visibly to every player ability, supported by Niagara VFX and post-processing.</li>
+    </ul>
 
 </section>
 
@@ -136,7 +151,7 @@
             <div class="video-wrap">
                                 <iframe class="yt-player" data-video-id="xQNdW9eIk_s"
                     src="https://www.youtube.com/embed/xQNdW9eIk_s?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=xQNdW9eIk_s&controls=0&disablekb=1&modestbranding=1&rel=0&fs=0&iv_load_policy=1&playsinline=1"
-                    title="Sheep State Machine"
+                    title="Sheep Steering Behaviour"
                     frameborder="0"
                     allow="autoplay; encrypted-media; picture-in-picture"
                     referrerpolicy="strict-origin-when-cross-origin"></iframe>
@@ -147,7 +162,7 @@
             </div>
             <div class="video-card-caption">
                 <h4>Sheep Steering Behaviour</h4>
-                <p>The sheep moving behaviour is done with using boids and applying external forces</p>
+                <p>Sheep movement uses boids, with external forces applied on top.</p>
             </div>
         </div>
 
@@ -165,14 +180,19 @@
                 </button>
             </div>
             <div class="video-card-caption">
-                <h4>player Ability &amp; sheep feedback System</h4>
-                <p>sheep reaction feedbacks on player abilitys</p>
+                <h4>Player Ability &amp; Sheep Feedback System</h4>
+                <p>How the sheep react to each player ability.</p>
             </div>
         </div>
 
     </div>
 
 </section>
+
+<div class="project-pager">
+    <a href="shaperfolk.html"><small>Previous project</small><b>Shaperfolk</b></a>
+    <a href="index.html#projects" class="next"><small>All projects</small><b>Back to the list</b></a>
+</div>
 
 <footer>
     <p>&copy; <span id="year"></span> Guna Sekhar Reddy Bakka — built with care, one commit at a time.</p>

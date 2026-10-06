@@ -8,8 +8,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 
+<meta name="theme-color" content="#310409">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🐸%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="Style.css">
 </head>
 <body>
@@ -24,7 +26,7 @@
     </button>
 
     <ul id="navList">
-        <li><a href="index.html#about">About</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="index.html#contact">Contact</a></li>
@@ -89,6 +91,19 @@
 
 <section class="detail-section">
 
+    <h2 class="section-title">How It Works</h2>
+
+    <ul class="tech-list">
+        <li><b>Followers</b>Rescued frogs attach to Greg and trail behind him, so every rescue changes how the level feels to run.</li>
+        <li><b>Progression tracking</b>Frog types and rescue statistics are data-driven, and every frog saved or lost is tracked across levels.</li>
+        <li><b>Checkpoints and lives</b>Checkpoints, player lives and damage and death handling form the respawn loop.</li>
+        <li><b>Audio and feedback</b>An audio manager blends music and effects across scenes, and a feedback system makes pickups and hits readable.</li>
+    </ul>
+
+</section>
+
+<section class="detail-section">
+
     <h2 class="section-title"><span class="tag">//</span> Development Footage</h2>
 
     <div class="video-grid">
@@ -147,7 +162,7 @@
             </div>
             <div class="video-card-caption">
                 <h4>Frog Tracker</h4>
-                <p>Tracks every frog that saves or losts.</p>
+                <p>Tracks every frog that is saved or lost.</p>
             </div>
         </div>
 
@@ -166,13 +181,18 @@
             </div>
             <div class="video-card-caption">
                 <h4>Sound Implementation</h4>
-                <p>Smoothly blends all the sounds and traverse across the  scenes</p>
+                <p>Blends music and sound effects smoothly as the player moves across scenes.</p>
             </div>
         </div>
 
     </div>
 
 </section>
+
+<div class="project-pager">
+    <span></span>
+    <a href="shaperfolk.html" class="next"><small>Next project</small><b>Shaperfolk</b></a>
+</div>
 
 <footer>
     <p>&copy; <span id="year"></span> Guna Sekhar Reddy Bakka — built with care, one commit at a time.</p>
